@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    font-family: 'Neuehaasdisplay mediu',sans-serif;    
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+
+}
+
+#main{
+    background-color: #efeae3;
+}
+
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
+  
+    /* background-color: red; */
+
+}
+nav {
+    padding: 2vw 2.5vw;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    padding: 10px 20px;
+    
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #0b0500;
+    transition: all ease 0.3s;
+    position: relative;
+    font-size: 18px;
+    /* transition: ease-in 2s; */
+    overflow: hidden;
+}
+#nav-part2 h4 a{
+    text-decoration: none;
+    position: relative;
+    color: #0b0500;
+    z-index: 9;
+}
+#nav-part2 h4::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #0b0500;
+    left:0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+
+
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0%;
+    
+
+}
+#nav-part2 h4:hover a{
+    color: #efeae3;
+}
+
+#center{
+    
+    width: 100%;
+    height: 65vh;
+    /* background-color: orangered; */
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-between;
+    /* border-bottom: 1px solid #0b0500; */
+    padding: 2vw;
+   
+}
+#left h4{
+    font-weight: 600;
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+    padding-top: 2vh;
+
+}
+#center h1{
+    text-transform: uppercase;
+    text-align: end;
+    font-size: 10vw;
+    line-height: 8vw;
+    font-weight: 800;
+}
+video{
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 100%;
+}
+
+#hero-shape{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    background-color: #fe360a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 65vh;
+    filter: blur(20px);
+}
+
+#hero1{
+    position: relative;
+    width: 36vw;
+    height: 36vw;
+    background :linear-gradient( #fe360a, red);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hero2{
+    position: relative;
+    width: 36vw;
+    height: 36vw;
+    background :linear-gradient( #fe360a, red);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime;
+    animation-timing-function: ease-in-out;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 99;
+
+}
+
+@keyframes anime{
+    from{
+        transform: translate(-10%,-10%);
+    }
+    to{
+        transform: translate(10%,10%);
+    }
+}
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 8vw;
+    /* background-color: #fe360a; */
+
+}
+#moving-text{
+    
+    overflow-x: auto;
+    display: flex;
+    scrollbar-width: none;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+#moving-text h1{
+    font-weight: 700;
+    font-size: 9vw;
+}
+.con{
+    display: flex;
+    gap: 15px;
+    text-transform: uppercase;
+    animation: moves;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+#gola{
+    
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #fe360a;
+    margin-top: 41px;
+}
+
+@keyframes moves{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
