@@ -219,3 +219,7 @@ video{
         transform: translateX(-100%);
     }
 }
+.c-scrollbar_thumb{
+    display: none;
+    opacity: 0;
+}
