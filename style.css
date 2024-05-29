@@ -318,16 +318,17 @@ video {
     padding: 4vw 0;
 }
 
-.elem {
+.elem { 
     height: 130px;
     width: 100%;
-
+    display: flex;
     border-bottom: 2px solid #d1ccc5;
     position: relative;
     display: flex;
     align-items: center;
     padding: 0 2vw;
     overflow: hidden;
+    justify-content:space-between;
 }
 
 .elem h2 {
@@ -388,3 +389,13 @@ video {
     bottom: 0;
     top: 0;
 }
+#page3 .content-right  {
+    text-align: right;
+    z-index: 99;
+  }
+  
+  #page3 .content-right p {
+    font-family: neulight;
+    padding: 0;
+    color: #0b0500ab;
+  }
