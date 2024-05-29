@@ -1,2 +1,1 @@
-# Sundown-studio-clone
-created a clone of sundown studio website 
+Cloned the website - www.sundown-studio.com from scratch, including all the effects, animations, loaders etc with only the help of HTML, CSS and a bit of JS. Libraries used - GSAP, Locomotive - for smooth scrolling and Swiper JS - for smooth slider pages. 
