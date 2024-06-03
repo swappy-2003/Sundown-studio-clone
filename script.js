@@ -1,6 +1,6 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
-    smooth: true
+    smooth: false
 });
 
 var a = document.querySelector("#elem1")
@@ -26,3 +26,22 @@ elems.forEach(function(e){
         g.style.backgroundImage = `url(${image})`
     })
 })
+
+
+  function swiperAnimation() {
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "3",
+        centeredSlides: false,
+        spaceBetween: 120,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",    
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+    });
+}
+
+swiperAnimation();
