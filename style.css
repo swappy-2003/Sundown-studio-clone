@@ -15,27 +15,32 @@ body {
 #main {
     background-color: #efeae3;
     scrollbar-width: none;
-    z-index: 1000;
+    z-index: 20;
     position: relative;
+ 
+}
+*::selection{
+    color: #0b0500;
+    background-color: #fe320a;
 }
 
 #page1 {
     min-height: 100vh;
-    width: 100%;
-    padding: 0 2vw;
-    position: relative;
-
-    /* background-color: red; */
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0 2vw;
+  z-index: 10;
 }
 
 nav {
-    padding: 2vw 2.5vw;
+    padding: 2vw 0vw;
     width: 100%;
     /* background-color: red; */
     display: flex;
     align-items: center;
     position: relative;
-    /* z-index: 100; */
+    z-index: 100;
     justify-content: space-between;
 }
 
@@ -175,11 +180,14 @@ video {
 }
 
 #page2 {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 8vw;
-    /* background-color: #fe360a; */
+    min-height: 120vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 6vw 0;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 30vh;
+
 }
 
 #moving-text {
@@ -314,8 +322,10 @@ video {
 #page3 {
     min-height: 100vh;
     width: 100%;
+    padding: 0 0;
     background-color: #efeae3;
-    padding: 4vw 0;
+    position: relative;
+    z-index: 10;
 }
 
 .elem { 
@@ -340,7 +350,7 @@ video {
     padding: 1.75em 2em;
     height: 100%;
     width: 100%;
-    background-color: #ff9831;
+    background:linear-gradient(to top, #ec4220, #fe800a);
     position: absolute;
     left: 0;
     top: -100%;
@@ -367,28 +377,43 @@ video {
     background-size: cover;
     background-position: center;
 }
-
 #page4 {
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     background-color: #efeae3;
+    padding: 6vw 3vw;
+    position: relative;
+    z-index: 10;
 }
-
-#page5 {
+#page5{
     height: 100vh;
     width: 100%;
+    background: transparent;
 }
+#page6{
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    position: relative;
+}
+
 
 #footer {
     position: fixed;
-    height: 100vh;
+    height: 120vh;  /* Adjusted height to fit within viewport */
     width: 100%;
     background-color: #0b0500;
-    color: white;
-    z-index: 99;
-    bottom: 0;
-    top: 0;
+    color: #fff;
+    z-index: 2;  /* Ensure it's above page content */
+    bottom: 0;  /* Stick to the bottom of the viewport */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+    gap: 6vh;
+    /* overflow: hidden; */
 }
+
 #page3 .content-right  {
     text-align: right;
     z-index: 99;
@@ -398,4 +423,202 @@ video {
     font-family: neulight;
     padding: 0;
     color: #0b0500ab;
+  }
+  #page6{
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+  }
+
+  #footer h1{
+    font-size: 21.5vw;
+  }
+  #footer-div{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   padding-right: 7.3vh;
+   padding-left: 7.7vh;
+   padding-top: 0;
+   z-index: 9;
+    
+    /* background-color: #ec4220; */
+  }
+  #links{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+   
+    
+    
+  }
+
+
+  #links a{
+     text-decoration: none;
+    color: #d1ccc5;
+    font-size: 5vh;
+    font-weight: 600;
+  }
+
+  #footer-bottom{
+    padding-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d1ccc5;
+    height: 10vh;
+    width: 100%;
+    /* background-color: #fe360a   ; */
+
+  }
+  #footer-bottom a{
+    text-decoration: none;
+    color: #d1ccc5;
+    position: relative;
+    font-weight: 100;
+  }
+
+  #footer-bottom h4 a::after{
+
+    content: '';
+    background-color:#d1ccc5;
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    transform: scaleX(0);
+    bottom: -2px;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    /* display: block; */
+
+  }
+
+  #footer-bottom  h4     :hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  #footer-div p{
+    font-size: 2.7vh;
+  }
+
+  #footer-shape{
+    position: relative;
+    height: auto;    
+    width: 100%;
+    /* background-color: #fe360a; */
+  }
+  #shape1{
+   position : absolute;
+  top: -17em;
+  bottom: auto;
+  left: -19em;
+  right: auto;
+    width: 103em;
+    height: 32em;
+    background: linear-gradient(to top,red,orangered);
+    filter: blur(40px);
+    transform: rotate(-15deg);
+    animation-name: animeee;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    /* z-index: 3; */
+
+  }
+  #shape2{
+    position: absolute;
+    top:-17em;
+    bottom: 100;
+    width: 100em;
+    height: 30em;
+    background: linear-gradient(to top,red,orangered);
+    filter: blur(40px);
+    transform: rotate(15deg);
+    z-index: 2;
+    animation-name: animeee;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+
+
+
+  }
+  #shape3{
+    position: absolute;
+    height: 80em;
+    width: 50em;
+    /* background-color:aqua; */
+    right: -257px;
+    bottom: -10%;
+
+  }
+  @keyframes animeee {
+    from {
+        transform: translate(15%, -10%);
+        transform: skew(5%, 5%);
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: translate(-10%, 10%);
+        transform: skew(-5%, -5%);
+        transform: scale(0.8);
+    }
+    
+    
+  }
+
+  .swiper {
+    padding-inline: 0vw;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper img {
+    margin-top: 2.5vw;
+  }
+  
+  .swiper-slide {
+    width: 30%;
+    border-left: 1px solid #c8c8c8;
+    padding-left: 3vw;
+  }
+  
+  .swiper-button-next {
+    color: #fe320a;
+  }
+  
+  .swiper-button-prev {
+    
+     color: #fe320a;    
+  }
+  
+  .swiper-pagination-progressbar {
+    background-color: #fe320a;
+  }
+
+
+  #chota-gola{
+    /* display:inline; */
+    position: absolute;
+    width: 12px;
+    height: 12px;
+   background-color: #fe320a;
+    border-radius: 50%;
+  }
+  #page4 p{
+    display: inline;
+    padding-left: 20px;
+  }
+
+  .text{
+    padding-top: 5vh;
+    font-size: 3.5vh;
+    font-weight: lighter;
+    line-height: 26px;
+
   }
